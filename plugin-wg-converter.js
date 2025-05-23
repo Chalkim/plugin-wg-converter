@@ -124,16 +124,7 @@ function parseWireGuardConfig(input, dialFields = {}) {
           },
         ],
       },
-    ],
-    route: {
-      rules: [
-        {
-          action: "route",
-          ip_cidr: config.Interface.Address,
-          outbound: "wg-ep",
-        },
-      ],
-    },
+    ]
   };
 
   return JSON.stringify(result, null, 2);
